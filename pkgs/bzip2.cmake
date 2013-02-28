@@ -5,8 +5,6 @@
 #
 # http://www.bzip.org/
 
-# FIXME: set -fPIC to be able to create the shared library
-
 if (NOT bzip2_NAME)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
