@@ -17,7 +17,7 @@ Building process is inspired by [buildem](https://github.com/janelia-flyem/build
 
 The following command line installs all required dependencies at once:
 ```bash
-sudo apt-get install build-essential cmake git
+sudo apt-get install build-essential cmake cmake-qt-gui git
 ```
 ## Build
 
