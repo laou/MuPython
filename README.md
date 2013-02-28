@@ -7,9 +7,18 @@ This idea behind MuPython is to optimize Python for a given hardware configurati
 
 Building process is inspired by [buildem](https://github.com/janelia-flyem/buildem), a modular CMake-based system that leverages [CMake's ExternalProject](http://www.kitware.com/media/html/BuildingExternalProjectsWithCMake2.8.html) to simplify and automate a complex build process.
 
-## It is just a start...
+# Installation
 
-For now I am focusing on Linux and a limited number of packages...
+## Prerequisites
 
-...so far I have only compiled python 2.7 with some dependencies.
+### Linux
 
+#### Ubuntu
+
+The following command line installs all required dependencies at once:
+```bash
+sudo apt-get install build-essential cmake git
+```
+## Build
+
+To build MuPython you can either run 'cmake' in command line or use 'cmake-gui'.
