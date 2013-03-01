@@ -44,7 +44,7 @@ ExternalProject_Add(${openssl_NAME}
     PATCH_COMMAND       ""
     CONFIGURE_COMMAND   ${MU_ENV_STRING} ${SSL_CONFIGURE_COMMAND}
         --prefix=${MU_BUILD_DIR}
-        --openssldir=${MU_LIB_DIR}/ssl
+        --openssldir=${MU_BUILD_DIR}/etc/ssl
         -I${MU_INCLUDE_DIR}
         -L${MU_LIB_DIR}
         shared
