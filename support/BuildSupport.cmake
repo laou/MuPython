@@ -60,7 +60,9 @@ endif()
 set (MU_BIN_PATH     ${MU_BIN_DIR}:$ENV{PATH})
 set (MU_LIB_PATH     ${MU_LIB_DIR}:$ENV{${MU_LD_LIBRARY_VAR}})
 set (MU_ENV_STRING   env PATH=${MU_BIN_PATH} ${MU_LD_LIBRARY_VAR}=${MU_LIB_PATH} ${MU_PLATFORM_SPECIFIC_ENV})
-set (MU_LDFLAGS      "-Wl,-rpath,${MU_LIB_DIR} -L${MU_LIB_DIR}"),\$${ORIGIN}/../lib
+#set (MU_LDFLAGS      "-L${MU_LIB_DIR}")
+set (MU_LDFLAGS      "-Wl,-rpath,${MU_LIB_DIR} -L${MU_LIB_DIR}")
+#set (MU_LDFLAGS      "-Wl,-rpath,\$${ORIGIN}/../lib -L${MU_LIB_DIR}")
 
 # All library builds should go to BPD/lib
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY  ${MU_LIB_DIR})
