@@ -23,7 +23,8 @@ include (BuildSupport)
 include (bzip2)
 include (gdbm)
 include (ncurses)
-include (openssl)   # without openssl, hashlib might have missing encryption methods
+include (openssl)
+include (readline)
 include (sqlite)
 include (zlib)
 
@@ -61,7 +62,7 @@ endif()
 set (PYTHON_CPPFLAGS "-I${MU_INCLUDE_DIR}, -I/${MU_INCLUDE_DIR}/ncurses")
 
 ExternalProject_Add(${python_NAME}
-    DEPENDS             ${bzip2_NAME} ${gdbm_NAME} ${ncurses_NAME} ${openssl_NAME} ${sqlite_NAME} ${zlib_NAME}
+    DEPENDS             ${bzip2_NAME} ${gdbm_NAME} ${ncurses_NAME} ${openssl_NAME} ${readline_NAME} ${sqlite_NAME} ${zlib_NAME}
     PREFIX              ${MU_BUILD_DIR}
     URL                 ${python_URL}
     URL_MD5             ${python_MD5}
