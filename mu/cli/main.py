@@ -8,6 +8,8 @@ Created on Sun Mar  3 00:19:13 2013
 import sys
 import argparse
 
+import main_help
+
 def main():
     
     from .. import __version__
@@ -20,6 +22,13 @@ def main():
         action='version',
         version='mu %s' % __version__,
     )
+    
+    sub_parsers = p.add_subparsers(
+        metavar = 'command',
+        dest    = 'cmd',
+    )    
+    
+    main_help.create_parser(sub_parsers)    
     
     args = p.parse_args()
     
