@@ -22,3 +22,7 @@ sudo apt-get install build-essential cmake cmake-qt-gui git
 ## Build
 
 To build MuPython you can either run 'cmake' in command line or use 'cmake-gui'.
+
+# Package management tool
+
+The ``mu`` command is a command line interface for managing a μPython installation. It can query and search the μPython package index and current μPython installation, create new μPython environments, and install and upgrade packages into existing μPython environment.

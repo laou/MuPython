@@ -9,7 +9,17 @@ import sys
 import argparse
 
 def main():
-    print sys.argv
+    
+    from .. import __version__
+
+    p = argparse.ArgumentParser(
+        description='mu is a tool for managing μPython environments and packages.'
+    )
+    p.add_argument(
+        '-v', '--version',
+        action='version',
+        version='mu %s' % __version__,
+    )
 
 if __name__ == '__main__':
     main()
